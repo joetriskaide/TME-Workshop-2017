@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: TME-Workshop-2017
+  host: TME-Workshop-2017
+  disk_quota: 1024M
+  services:
+  - TME-Workshop-2017-cloudantNoSQLDB
+  - TME-Workshop-2017-iotf-service
