@@ -76,7 +76,7 @@ function TroubleTicket(_elemName) {
     }
 
 	function wsinit() {
-        ws = new WebSocket('ws://'+$(document)[0].location.hostname+'/tmelab/newtt');
+        ws = new WebSocket('wss://'+$(document)[0].location.hostname+'/tmelab/newtt');
         ws.onopen=wsopen;
         ws.onclose=wsclose;
         ws.onerror=wserror;

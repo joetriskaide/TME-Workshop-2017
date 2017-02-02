@@ -26,11 +26,11 @@ function DevChart(_elemName) {
         
         if (chart !== null) {
            // draw lines
-            var table  = [['Num', 'X', "Y", "Z", "Roll", "Yaw", "Pitch"]];
+            var table  = [['Date', 'X', "Y", "Z", "Roll", "Yaw", "Pitch"]];
             l=mydata.length;
             for (i=0; i<l; i++) {
                 s=mydata[i].d;
-                table.push([i+1, s.acceleration_x, s.acceleration_y, s.acceleration_z, s.roll, s.yaw, s.pitch]);
+                table.push([new Date(s.ts), s.acceleration_x, s.acceleration_y, s.acceleration_z, s.roll, s.yaw, s.pitch]);
             }
             opts.title=dev;
             chart.draw(google.visualization.arrayToDataTable(table), opts);
